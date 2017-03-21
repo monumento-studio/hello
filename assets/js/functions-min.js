@@ -1,0 +1,1 @@
+$(document).ready(function(){var o=function(o,n){n=void 0!==n?n:.5,n=1-n;var c=$(document);o.css({"background-attatchment":"fixed"}),$(window).scroll(function(){var t=c.scrollTop(),a="0px "+n*t+"px";o.css({"background-position":a})})};o($(".box2")),o($(".box3"),.25)});

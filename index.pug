@@ -7,9 +7,10 @@ html
 		link(rel="shortcut icon" href="favicon.png")
 		link(rel="stylesheet" href="assets/css/main.css")
 	body
-		.container-home(style="overflow: auto;")
+		.container-home
+			include _imports/_menu.pug
 			section.home
-				.bg
+				.bg.box3
 					.content
 						img(src="assets/img/hello-logo-text.svg")
 						h2 
@@ -19,7 +20,8 @@ html
 				.bg
 					.content
 						h2 
-							span The Aha! Moment
+							span 
+								a(href="/page/aha.html") The Aha! Moment
 						p We knew we were doing things well, but there was one question that remained in the back of our heads:
 				
 			section.how
@@ -46,10 +48,11 @@ html
 			section.do
 				.bg
 					.content
-						h2 Hello Management provides a multidisciplinary service that covers every stage of the process of bringing a building to life.
+						h2
+							span Ok, so what do we really do?
 						.rigth
-							h2
-								span Ok, so what do we really do?
+							h2 Hello Management provides a multidisciplinary service that covers every stage of the process of bringing a building to life. 
+								
 			section.started
 				.bg
 					.content
@@ -82,4 +85,4 @@ html
 							
 
 		script(src="assets/js/jquery-2.1.4.min.js")
-		script(src="assets/js/function.js" type="text/javascript")
+		script(src="assets/js/functions.js" type="text/javascript")
