@@ -9,20 +9,37 @@
   </head>
   <body>
     <div class="container-home">
-      <div class="menu-desk"><img class="menu" src="/assets/img/ham-home.svg" alt="Botón menú" id="menu"><img class="menu" src="/assets/img/face.svg" alt="Hello logo">
-        <div class="text"><a id="say">Say Hello. <br></a>
-          <!--a#how How can we help you?-->
-        </div><a href="#" target="_blank"><img class="menu" src="/assets/img/facebook.svg" alt="facebook logo"></a><a href="#" target="_blank"><img class="menu" src="/assets/img/twitter.svg" alt="twitter logo"></a><a href="#" target="_blank"><img class="menu" src="/assets/img/linkedin.svg" alt="linkedin logo"></a>
+      <div class="menu-desk"><img class="menu menuclick" src="/assets/img/ham-home.svg" alt="Botón menú"><a href="/"><img class="menu" src="/assets/img/face.svg" alt="Hello logo"></a>
+        <div class="text"><a id="say">Say Hello. <br><br></a><a>How can we help you?</a></div><a href="#" target="_blank"><img class="menu" src="/assets/img/facebook.svg" alt="facebook logo"></a><a href="#" target="_blank"><img class="menu" src="/assets/img/twitter.svg" alt="twitter logo"></a><a href="#" target="_blank"><img class="menu" src="/assets/img/linkedin.svg" alt="linkedin logo"></a>
       </div>
+      <div class="cel">
+        <div class="iconos">
+          <div class="left"><a><img class="menucel menuclick" src="/assets/img/ham-home-blue.svg" alt="Botón menú"></a></div>
+          <div class="right"><a href="/"><img class="menucel" src="/assets/img/face-blue.svg" alt="Hello logo"></a></div>
+        </div>
+      </div>
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/56b0d938fe87529955d7c0ef/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
       <div class="overlay">
         <div class="menubox">
-          <div class="container"><img class="x" src="/assets/img/x.svg"><img src="/assets/img/face.svg">
+          <div class="container"><img class="x" src="/assets/img/x.svg"><a href="/"><img src="/assets/img/face.svg"></a>
             <div class="links"><a href="/">Welcome.</a><a href="/page/aha.html">The Aha! Moment.</a><a href="/page/nice.html">Nice to meet you.</a><a href="/page/process.html">What we really do.</a><a href="/page/us.html">Who started Hello.</a><a href="/page/join.html">Hello Cares.</a></div>
             <div class="terms"><a>Terminos & Condiciones</a><br><a>Politicas De Privacidad</a></div>
           </div>
         </div>
         <div class="say">
-          <div class="container"><img class="x" src="/assets/img/x-blue.svg"><img src="/assets/img/face-blue.svg">
+          <div class="container"><img class="x" src="/assets/img/x-blue.svg"><a href="/"><img src="/assets/img/face-blue.svg"></a>
             <div class="text">
               <h3>Say Hello</h3>
               <div class="we">
@@ -56,16 +73,16 @@
         <div class="bg">
           <div class="content">
             <h2> <span> <a href="/page/aha.html">The Aha! Moment</a></span></h2>
-            <p>We knew we were doing things well, but there was one question that remained in the back of our heads:</p>
+            <p class="small">We knew we were doing things well, but there was one question that remained in the back of our heads:</p>
           </div>
         </div>
       </section>
       <section class="how">
         <div class="bg">
-          <div class="content">
-            <h2>How could we go the extra mile?</h2>
+          <div class="content"><a href="/page/aha.html#extra">
+              <h2>How could we go the extra mile?</h2></a>
             <div class="rigth">
-              <h3><span>Learn more about our big moment.</span></h3><a href="/page/aha.html"><img src="assets/img/flecha.svg"></a>
+              <h3><a href="/page/aha#extra.html"><span>Learn more about our big moment.</span></a></h3><a href="/page/aha#extra.html"><img src="assets/img/flecha.svg"></a>
             </div>
           </div>
         </div>
@@ -74,11 +91,11 @@
         <div class="bg">
           <div class="content"><a href="/page/nice.html">
               <h3><span>Nice to meet you!</span></h3></a>
-            <div class="rigth"><a href="/page/nice.html" style="color: #00556F;">
-                <h5>Let’s get familiar.</h5></a>
-              <h2 class="uno">This is how we do it. </h2>
-              <h2 class="dos"><span>This is what we intend to do.  </span></h2>
-              <h2 class="tres">This is what we stand for.</h2>
+            <div class="rigth">
+              <h5>Let’s get familiar.</h5><a href="/page/nice.html#how">
+                <h2 class="uno">This is how we do it. </h2></a>
+              <h2 class="dos"><a href="/page/nice.html#then"><span>This is what we intend to do.</span></a></h2><a href="/page/nice.html#this"> 
+                <h2 class="tres">This is what we stand for.</h2></a>
             </div>
           </div>
         </div>
@@ -98,7 +115,7 @@
           <div class="content">
             <h3>And who started <br>Hello Management?</h3>
             <div class="rigth">
-              <h2>Meet the brains behind it all.</h2><a href="/page/us.html"><img src="assets/img/flecha-azul.svg"></a>
+              <h2 class="large">Meet the brains behind it all.</h2><a href="/page/us.html"><img src="assets/img/flecha-azul.svg"></a>
             </div>
           </div>
         </div>
@@ -119,7 +136,7 @@
                 <h3> <span>Ask us a question or just say hello!</span></h3>
               </div>
               <div class="right">
-                <h2>How can we help you? </h2>
+                <h2 class="large">How can we help you? </h2>
               </div>
             </div>
           </div>

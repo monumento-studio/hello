@@ -1,21 +1,44 @@
 .menu-desk
-	img(src="/assets/img/ham-home.svg" alt="Botón menú").menu#menu
-	img(src="/assets/img/face.svg" alt="Hello logo").menu
+	img(src="/assets/img/ham-home.svg" alt="Botón menú").menu.menuclick
+	a(href="/")
+		img(src="/assets/img/face.svg" alt="Hello logo").menu
 	.text
-		a#say Say Hello. <br>
-		//a#how How can we help you?
+		a#say Say Hello. <br><br>
+		a How can we help you?
 	a(href="#" target="_blank")
 		img(src="/assets/img/facebook.svg" alt="facebook logo").menu
 	a(href="#" target="_blank")
 		img(src="/assets/img/twitter.svg" alt="twitter logo").menu
 	a(href="#" target="_blank")
 		img(src="/assets/img/linkedin.svg" alt="linkedin logo").menu
-		
+.cel
+	.iconos
+		.left
+			a
+				img(src="/assets/img/ham-home-blue.svg" alt="Botón menú").menucel.menuclick
+		.right
+			a(href="/")
+				img(src="/assets/img/face-blue.svg" alt="Hello logo").menucel
+.
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/56b0d938fe87529955d7c0ef/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
 .overlay
 	.menubox
 		.container
 			img(src="/assets/img/x.svg").x
-			img(src="/assets/img/face.svg")
+			a(href="/")
+				img(src="/assets/img/face.svg")
 			.links
 				a(href="/") Welcome.
 				a(href="/page/aha.html") The Aha! Moment.
@@ -31,7 +54,8 @@
 	.say
 		.container
 			img(src="/assets/img/x-blue.svg").x
-			img(src="/assets/img/face-blue.svg")
+			a(href="/")
+				img(src="/assets/img/face-blue.svg")
 			.text
 				h3 Say Hello
 				.we

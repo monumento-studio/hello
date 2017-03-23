@@ -22,16 +22,18 @@ html
 						h2 
 							span 
 								a(href="/page/aha.html") The Aha! Moment
-						p We knew we were doing things well, but there was one question that remained in the back of our heads:
+						p.small We knew we were doing things well, but there was one question that remained in the back of our heads:
 				
 			section.how
 				.bg
 					.content
-						h2 How could we go the extra mile?
+						a(href="/page/aha.html#extra")
+							h2 How could we go the extra mile?
 						.rigth
 							h3
-								span Learn more about our big moment.
-							a(href="/page/aha.html")
+								a(href="/page/aha#extra.html")
+									span Learn more about our big moment.
+							a(href="/page/aha#extra.html")
 								img(src="assets/img/flecha.svg")
 								
 			section.nice
@@ -41,12 +43,14 @@ html
 							h3
 								span Nice to meet you!
 						.rigth
-							a(href="/page/nice.html" style="color: #00556F;")
-								h5 Let’s get familiar.
-							h2.uno This is how we do it. 
+							h5 Let’s get familiar.
+							a(href="/page/nice.html#how")
+								h2.uno This is how we do it. 
 							h2.dos
-								span This is what we intend to do.  
-							h2.tres This is what we stand for.
+								a(href="/page/nice.html#then")
+									span This is what we intend to do.
+							a(href="/page/nice.html#this")  
+								h2.tres This is what we stand for.
 							
 			section.do
 				.bg
@@ -61,7 +65,7 @@ html
 					.content
 						h3 And who started <br>Hello Management?
 						.rigth
-							h2 Meet the brains behind it all.
+							h2.large Meet the brains behind it all.
 							a(href="/page/us.html")
 								img(src="assets/img/flecha-azul.svg")
 			section.bel
@@ -79,7 +83,7 @@ html
 								h3 
 									span Ask us a question or just say hello!
 							.right
-								h2 How can we help you? 
+								h2.large How can we help you? 
 			footer
 				.content
 					img(src="assets/img/logo-footer.svg")

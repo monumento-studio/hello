@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  $('#menu').click(function(){
+  $('.menuclick').click(function(){
     $('.overlay').css( "display", "block" );
     $('.menubox').css( "display", "block" );
   });

@@ -4,6 +4,7 @@
 	top: 20px
 	display: block
 	text-align: left
+	height: auto
 	.menu
 		display: block
 		top: 150px
@@ -14,18 +15,41 @@
 		width: 20px
 		height: 20px
 	a
+		box-sizing: border-box
 		text-align: left
 		letter-spacing: 3px
 		font-weight: lighter
-		font-size: .8em
 
 	.text
+		display: block
 		margin: 90px 60px
+		overflow: auto
 
 		a
+			box-sizing: border-box
+			line-height: 1px !important
 			letter-spacing: 3px
 			font-weight: lighter
-			font-size: .8em
+			font-size: .7em
+.cel
+	position: fixed
+	top: 0
+	background: white
+	height: 75px
+	width: 100%
+	z-index: 2
+	.iconos
+		position: relative
+		top: 23px
+		height: 100%
+		display: flex
+		padding: 0 25px
+		flex-direction: row
+		justify-content: space-between
+		img
+			cursor: pointer
+			width: 35px
+
 .overlay
 	z-index: 1
 	display: none
@@ -37,10 +61,10 @@
 	background: rgba(0,0,0, 0.5)
 
 	.menubox
-		z-index: 100
+		z-index: 1000
 		display: none
 		position: absolute
-		top: 0
+		bottom: 0
 		left: 0
 		background: url(../img/bg-menu.svg)
 		background-position: left
@@ -100,10 +124,11 @@
 					margin-top: 80px
 					font-size: .8em
 					letter-spacing: 2px
+					color: #00556f !important
 					a
 						padding: 0
 						margin: 0
-						color: #00556f
+						color: #00556f !important
 					p
 						padding: 0
 						margin: 0
@@ -129,3 +154,22 @@
 
 	.how
 		display: none
+@media(max-width: 1000px)
+	.menu-desk
+		.menu
+			margin-left: 30px !important
+		.text
+			margin-left: 30px !important
+@media(min-width: 900px)
+	.cel
+		display: none
+
+@media(max-width: 900px)
+	.menu-desk
+		display: none
+	.cel
+		display: block
+	.overlay
+		.menubox
+			height: calc(100vh - 75px)
+			transition: all 1s ease !important

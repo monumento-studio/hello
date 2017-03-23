@@ -188,12 +188,24 @@ th {
 
 body {
   background-color: white;
-  font-size: 10pt;
+  font-size: 1vw !important;
   line-height: 1.6;
   color: white;
   font-family: 'Akkurat-Light';
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden; }
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 1.5vw !important; } }
+
+@media (max-width: 900px) {
+  body {
+    font-size: 1.6vw !important; } }
+
+@media (max-width: 645px) {
+  body {
+    font-size: 2.5vw !important; } }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -273,14 +285,14 @@ section.home {
   background-repeat: no-repeat; }
   section.home .bg {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: url(../img/half-blue.svg);
-    background-attachment: local;
     background-repeat: no-repeat;
     background-position: right; }
     section.home .bg .content {
       margin: 0 auto;
       max-width: 800px;
+      padding: 15px;
       overflow: auto; }
       section.home .bg .content img {
         margin-top: 30px;
@@ -310,6 +322,7 @@ section.aha {
     section.aha .bg .content {
       margin: 0 auto;
       max-width: 800px;
+      padding: 25px 15px;
       color: #00556F;
       overflow: auto; }
       section.aha .bg .content h2 {
@@ -347,6 +360,7 @@ section.how {
     section.how .bg .content {
       margin: 0 auto;
       max-width: 800px;
+      padding: 15px;
       overflow: auto;
       position: relative;
       top: 50%;
@@ -384,6 +398,7 @@ section.nice {
   section.nice .bg .content {
     margin: 0 auto;
     max-width: 800px;
+    padding: 15px;
     overflow: auto; }
     section.nice .bg .content h3 {
       font-weight: lighter;
@@ -396,6 +411,8 @@ section.nice {
         border-bottom: solid 2px; }
     section.nice .bg .content .rigth {
       margin-left: 308px; }
+      section.nice .bg .content .rigth h2.uno {
+        color: #00556f !important; }
       section.nice .bg .content .rigth h5 {
         margin-top: 80px;
         letter-spacing: 1px;
@@ -411,6 +428,8 @@ section.nice {
         section.nice .bg .content .rigth h2.dos span {
           color: white;
           border-bottom: solid 3px; }
+      section.nice .bg .content .rigth h2.tres {
+        color: #00556f !important; }
 
 section.do {
   width: 100%;
@@ -430,6 +449,7 @@ section.do {
     section.do .bg .content {
       margin: 0 auto;
       max-width: 800px;
+      padding: 15px;
       overflow: auto;
       position: relative;
       top: 50%;
@@ -469,6 +489,7 @@ section.started {
     section.started .bg .content {
       margin: 0 auto;
       max-width: 800px;
+      padding: 15px;
       overflow: auto;
       position: relative;
       top: 50%;
@@ -506,6 +527,7 @@ section.bel {
   section.bel .bg .content {
     margin: 0 auto;
     max-width: 800px;
+    padding: 15px;
     position: relative; }
     section.bel .bg .content .top {
       position: relative;
@@ -557,6 +579,7 @@ footer {
   height: 50vh;
   background: #00556F; }
   footer .content {
+    padding: 15px;
     margin: 0 auto;
     max-width: 800px;
     position: relative;
@@ -586,12 +609,168 @@ footer {
         footer .content .right p:last-child {
           padding-bottom: 15px; }
 
+@media (max-width: 900px) {
+  section.home {
+    background-attachment: scroll !important;
+    position: relative;
+    top: 75px; }
+  section.how {
+    background-attachment: scroll !important; }
+  section.nice .bg .content h3 {
+    font-size: 2.5em; }
+  section.nice .bg .content .rigth h5 {
+    font-size: 1.2em; }
+  section.nice .bg .content .rigth h2 {
+    font-size: 3em; }
+  section.do .bg .content h2 {
+    float: none !important;
+    font-size: 2em; }
+  section.do .bg .content .rigth h2 {
+    margin-top: 30px !important;
+    float: none !important;
+    font-size: 2.5em; }
+  footer .content {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: auto; }
+    footer .content img {
+      max-width: 400px;
+      margin-bottom: 30px; }
+    footer .content p {
+      margin-top: 0px !important;
+      margin-bottom: 50px;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      max-width: 440px;
+      float: none !important; }
+    footer .content .right {
+      max-width: 360px;
+      position: static !important; }
+      footer .content .right p {
+        float: none !important;
+        margin: 0;
+        font-weight: lighter;
+        letter-spacing: 2px; }
+        footer .content .right p:last-child {
+          padding-bottom: 0px !important; } }
+
+@media (max-width: 1000px) {
+  section.aha h2 {
+    font-size: 2em !important; }
+  section.aha p {
+    font-size: 2em !important; }
+  section.how h2 {
+    font-size: 3em !important; }
+  section.how h3 {
+    font-size: 2em !important;
+    padding-top: 35px !important; }
+  section.do {
+    background-attachment: scroll !important; }
+    section.do .bg .content h2 {
+      font-size: 2em; }
+    section.do .bg .content .rigth h2 {
+      font-size: 2.5em; } }
+
+@media (max-width: 645px) {
+  section.aha h2 {
+    padding-top: 20px !important;
+    font-size: 1.7em !important; }
+  section.aha p {
+    font-size: 1.7em !important; }
+  section.nice .bg .content h3 {
+    float: none !important;
+    font-size: 2em; }
+  section.nice .bg .content .rigth {
+    margin-left: 0px !important; }
+    section.nice .bg .content .rigth h5 {
+      font-size: 1.2em; }
+    section.nice .bg .content .rigth h2 {
+      font-size: 2.5em; }
+  section.started .bg .content h3 {
+    font-size: 1.5em;
+    font-weight: lighter;
+    max-width: 200px;
+    letter-spacing: 2px;
+    float: none !important; }
+  section.started .bg .content .rigth h2 {
+    font-size: 3em;
+    margin-top: 30px;
+    margin-left: 0px !important; }
+  section.started .bg .content .rigth img {
+    bottom: 15px !important; }
+  section.bel .bg .content {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 100vh !important;
+    margin-top: 0px !important;
+    max-width: 800px;
+    padding: 15px;
+    position: relative; }
+    section.bel .bg .content .top {
+      height: auto !important;
+      position: static !important;
+      overflow: visible !important; }
+      section.bel .bg .content .top .left {
+        float: none !important; }
+        section.bel .bg .content .top .left h2 {
+          max-width: 440px;
+          letter-spacing: 2px;
+          font-weight: lighter;
+          font-size: 3em;
+          float: left; }
+      section.bel .bg .content .top .right {
+        margin-left: 0px !important;
+        max-width: 300px;
+        position: static !important; }
+        section.bel .bg .content .top .right h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 3em; }
+          section.bel .bg .content .top .right h3 span {
+            border-bottom: solid 2px; }
+    section.bel .bg .content .bottom {
+      height: auto !important;
+      position: static !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: visible !important; }
+      section.bel .bg .content .bottom .left {
+        float: none !important; }
+        section.bel .bg .content .bottom .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 3em; }
+          section.bel .bg .content .bottom .left h3 span {
+            border-bottom: solid 2px; }
+      section.bel .bg .content .bottom .right h2 {
+        font-size: 4em;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        max-width: 400px;
+        margin-left: 0px !important; } }
+
 .menu-desk {
   width: 230px;
   position: fixed;
   top: 20px;
   display: block;
-  text-align: left; }
+  text-align: left;
+  height: auto; }
   .menu-desk .menu {
     display: block;
     top: 150px;
@@ -602,16 +781,45 @@ footer {
     width: 20px;
     height: 20px; }
   .menu-desk a {
+    box-sizing: border-box;
     text-align: left;
     letter-spacing: 3px;
-    font-weight: lighter;
-    font-size: .8em; }
+    font-weight: lighter; }
   .menu-desk .text {
-    margin: 90px 60px; }
+    display: block;
+    margin: 90px 60px;
+    overflow: auto; }
     .menu-desk .text a {
+      box-sizing: border-box;
+      line-height: 1px !important;
       letter-spacing: 3px;
       font-weight: lighter;
-      font-size: .8em; }
+      font-size: .7em; }
+
+.cel {
+  position: fixed;
+  top: 0;
+  background: white;
+  height: 75px;
+  width: 100%;
+  z-index: 2; }
+  .cel .iconos {
+    position: relative;
+    top: 23px;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 25px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .cel .iconos img {
+      cursor: pointer;
+      width: 35px; }
 
 .overlay {
   z-index: 1;
@@ -623,10 +831,10 @@ footer {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); }
   .overlay .menubox {
-    z-index: 100;
+    z-index: 1000;
     display: none;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     background: url(../img/bg-menu.svg);
     background-position: left;
@@ -686,11 +894,12 @@ footer {
           font-weight: bolder;
           margin-top: 80px;
           font-size: .8em;
-          letter-spacing: 2px; }
+          letter-spacing: 2px;
+          color: #00556f !important; }
           .overlay .say .container .text .info a {
             padding: 0;
             margin: 0;
-            color: #00556f; }
+            color: #00556f !important; }
           .overlay .say .container .text .info p {
             padding: 0;
             margin: 0;
@@ -713,6 +922,25 @@ footer {
         height: 20px; }
   .overlay .how {
     display: none; }
+
+@media (max-width: 1000px) {
+  .menu-desk .menu {
+    margin-left: 30px !important; }
+  .menu-desk .text {
+    margin-left: 30px !important; } }
+
+@media (min-width: 900px) {
+  .cel {
+    display: none; } }
+
+@media (max-width: 900px) {
+  .menu-desk {
+    display: none; }
+  .cel {
+    display: block; }
+  .overlay .menubox {
+    height: calc(100vh - 75px);
+    transition: all 1s ease !important; } }
 
 section.page-aha {
   width: 100%;
