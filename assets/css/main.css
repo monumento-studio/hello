@@ -195,6 +195,10 @@ body {
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden; }
 
+@media (min-width: 1600px) {
+  body {
+    font-size: .8vw !important; } }
+
 @media (max-width: 1000px) {
   body {
     font-size: 1.5vw !important; } }
@@ -927,7 +931,9 @@ footer {
   .menu-desk .menu {
     margin-left: 30px !important; }
   .menu-desk .text {
-    margin-left: 30px !important; } }
+    margin-left: 30px !important; }
+  .overlay .menubox {
+    width: 50% !important; } }
 
 @media (min-width: 900px) {
   .cel {
@@ -940,7 +946,12 @@ footer {
     display: block; }
   .overlay .menubox {
     height: calc(100vh - 75px);
-    transition: all 1s ease !important; } }
+    transition: all 1s ease !important;
+    width: 50% !important; } }
+
+@media (max-width: 640px) {
+  .overlay .menubox {
+    width: 100% !important; } }
 
 section.page-aha {
   width: 100%;
@@ -1603,6 +1614,8 @@ footer {
       -webkit-flex-flow: row;
       -ms-flex-flow: row;
       flex-flow: row; }
+      .container-process section.this .bg .content .bottom a {
+        color: #00556F !important; }
       .container-process section.this .bg .content .bottom p {
         padding: 0;
         font-size: 2.5em; }
@@ -1848,3 +1861,131 @@ footer {
         font-size: 1.2em; }
         .container-join section.join .bg .content p.chico span {
           border-bottom: solid 1px; }
+
+.container-care section.page-nice {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/care/bg-care.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .container-care section.page-nice .bg {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/care/shape.svg);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: right; }
+    .container-care section.page-nice .bg .content {
+      margin: 0 auto;
+      max-width: 800px;
+      overflow: auto; }
+      .container-care section.page-nice .bg .content img {
+        margin-top: 30px;
+        max-width: 250px; }
+      .container-care section.page-nice .bg .content h2 {
+        margin-top: 100px;
+        font-size: 3em;
+        font-weight: lighter;
+        max-width: 300px; }
+        .container-care section.page-nice .bg .content h2 span {
+          border-bottom: solid 1px white; }
+      .container-care section.page-nice .bg .content p {
+        max-width: 485px;
+        letter-spacing: 5px;
+        font-weight: lighter;
+        font-size: 5em;
+        line-height: 1.3em;
+        float: right; }
+
+.container-care section.properties {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .container-care section.properties .bg {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/care/bg-cont.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left; }
+    .container-care section.properties .bg .content {
+      margin: 0 auto;
+      max-width: 700px;
+      overflow: auto;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      color: #00556f; }
+      .container-care section.properties .bg .content .left {
+        max-width: 420px;
+        float: left; }
+        .container-care section.properties .bg .content .left h2 {
+          font-weight: lighter;
+          font-size: 2.5em;
+          letter-spacing: 2px; }
+      .container-care section.properties .bg .content .right {
+        float: right;
+        max-width: 235px; }
+        .container-care section.properties .bg .content .right p {
+          font-size: 1.5em;
+          letter-spacing: 2px; }
+          .container-care section.properties .bg .content .right p a {
+            color: #00556f;
+            border-bottom: solid 1px #00556f; }
+
+.container-join section.join {
+  width: 100%;
+  height: 100vh;
+  background: white; }
+  .container-join section.join .bg {
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg-help.svg);
+    background-position: center;
+    background-size: cover; }
+    .container-join section.join .bg .content {
+      margin: 0 auto;
+      max-width: 800px;
+      overflow: auto;
+      color: #00556F;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .container-join section.join .bg .content img {
+        position: relative;
+        left: -150px;
+        margin-top: 30px;
+        max-width: 250px; }
+      .container-join section.join .bg .content .left {
+        display: block;
+        margin-top: 20px;
+        float: left;
+        max-width: 150px; }
+        .container-join section.join .bg .content .left h2 {
+          margin-top: 100px;
+          font-size: 2em;
+          font-weight: lighter; }
+        .container-join section.join .bg .content .left span {
+          border-bottom: solid 1px; }
+      .container-join section.join .bg .content p {
+        max-width: 450px;
+        letter-spacing: 5px;
+        font-weight: lighter;
+        font-size: 2em;
+        line-height: 1.3em;
+        float: right; }
+      .container-join section.join .bg .content p.chico {
+        letter-spacing: 3px;
+        font-weight: lighter;
+        max-width: 450px;
+        margin-right: 0px;
+        font-size: 1.2em; }
+        .container-join section.join .bg .content p.chico a {
+          color: #00556F; }
