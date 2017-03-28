@@ -831,11 +831,14 @@ footer {
     margin: 90px 60px;
     overflow: auto; }
     .menu-desk .text a {
+      color: white;
       box-sizing: border-box;
       line-height: 1px !important;
       letter-spacing: 3px;
       font-weight: lighter;
       font-size: .7em; }
+      .menu-desk .text a::after {
+        mix-blend-mode: difference !important; }
 
 .cel {
   position: fixed;
