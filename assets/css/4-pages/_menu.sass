@@ -1,4 +1,5 @@
 .menu-desk
+	z-index: 1
 	width: 230px
 	position: fixed
 	top: 20px
@@ -46,6 +47,11 @@
 		padding: 0 25px
 		flex-direction: row
 		justify-content: space-between
+		.left
+			.c
+				display: block
+			.xx
+				display: none
 		img
 			cursor: pointer
 			width: 35px
@@ -59,19 +65,20 @@
 	right: 0
 	bottom: 0
 	background: rgba(0,0,0, 0.5)
+	animation: op 1s ease forwards
 
 	.menubox
-		z-index: 1000
 		display: none
 		position: absolute
-		bottom: 0
+		bottom: 100%
 		left: 0
 		background: url(../img/bg-menu.svg)
 		background-position: left
 		background-size: cover
 		width: 30%
 		height: 100vh
-		transition: all 1s ease !important
+		animation: menu 1s ease forwards
+
 
 		.container
 			position: relative
@@ -103,13 +110,14 @@
 		z-index: 100
 		display: none
 		position: absolute
-		top: 0
 		left: 0
+		bottom: 100%
 		background: url(../img/say.svg)
 		background-position: left
 		background-size: cover
 		width: 30%
 		height: 100vh
+		animation: menu 1s ease forwards
 
 		.container
 			position: relative
@@ -174,6 +182,8 @@
 	.cel
 		display: block
 	.overlay
+		.x
+			opacity: 0
 		.menubox
 			height: calc(100vh - 75px)
 			transition: all 1s ease !important
@@ -184,3 +194,15 @@
 	.overlay
 		.menubox
 			width: 100% !important
+
+@keyframes menu
+	0%
+		bottom: 100%
+	100%
+		bottom: 0%
+
+@keyframes op
+	0%
+		background: rgba(0,0,0, 0)
+	100%
+		background: rgba(0,0,0, 0.5)

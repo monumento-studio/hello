@@ -1,4 +1,13 @@
 $( document ).ready(function() {
+  $('.xx').click(function(){
+    $('.overlay').css( "display", "none" );
+    $('.c').css( "display", "block" );
+    $('.xx').css( "display", "none" );
+  });
+  $('.c').click(function(){
+    $('.c').css( "display", "none" );
+    $('.xx').css( "display", "block" );
+  });
 
   $('.menuclick').click(function(){
     $('.overlay').css( "display", "block" );
@@ -97,7 +106,6 @@ $( document ).ready(function() {
 
 //scrolling
 
-$(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -110,7 +118,7 @@ $(function() {
       }
     }
   });
-});
+
 
 
 

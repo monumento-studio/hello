@@ -189,7 +189,7 @@ th {
 body {
   background-color: white;
   font-size: 1vw !important;
-  line-height: 1.6;
+  line-height: 1.4;
   color: white;
   font-family: 'Akkurat-Light';
   -webkit-text-size-adjust: 100%;
@@ -205,11 +205,11 @@ body {
 
 @media (max-width: 900px) {
   body {
-    font-size: 1.6vw !important; } }
+    font-size: 1.4vw !important; } }
 
 @media (max-width: 645px) {
   body {
-    font-size: 2.5vw !important; } }
+    font-size: 2.2vw !important; } }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -286,14 +286,21 @@ section.home {
   background: url(../img/bg-home.jpg);
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  -webkit-animation: opac 2.2s;
+  animation: opac 2.2s; }
   section.home .bg {
+    position: relative;
+    right: 0;
     width: 100%;
     height: 100%;
     background: url(../img/half-blue.svg);
+    background-position: right;
     background-repeat: no-repeat;
-    background-position: right; }
+    -webkit-animation: slidein 2s;
+    animation: slidein 2s; }
     section.home .bg .content {
+      position: relative;
       margin: 0 auto;
       max-width: 800px;
       padding: 15px;
@@ -452,9 +459,9 @@ section.do {
     background-size: cover; }
     section.do .bg .content {
       margin: 0 auto;
-      max-width: 800px;
+      max-width: 850px;
       padding: 15px;
-      overflow: auto;
+      overflow: hidden;
       position: relative;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -477,7 +484,7 @@ section.do {
         font-weight: lighter;
         line-height: 1.5em;
         font-size: 3.5em;
-        max-width: 440px;
+        max-width: 500px;
         letter-spacing: 2px;
         float: right; }
 
@@ -522,7 +529,7 @@ section.started {
 section.bel {
   width: 100%;
   height: 100vh;
-  background: url(../img/bg-bel.svg);
+  background: url(../img/bg-bel1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -537,7 +544,7 @@ section.bel {
       position: relative;
       top: 50px;
       height: 50vh;
-      overflow: auto; }
+      overflow: hidden; }
       section.bel .bg .content .top .left {
         float: left; }
         section.bel .bg .content .top .left h2 {
@@ -561,7 +568,7 @@ section.bel {
       position: relative;
       top: 100px;
       height: 50vh;
-      overflow: auto; }
+      overflow: hidden; }
       section.bel .bg .content .bottom .left {
         float: left; }
         section.bel .bg .content .bottom .left h3 {
@@ -614,6 +621,10 @@ footer {
           padding-bottom: 15px; }
 
 @media (max-width: 900px) {
+  section.aha .bg .content h2 {
+    margin-top: 100px; }
+  section.aha .bg .content p {
+    margin-top: 100px; }
   section.home {
     background-attachment: scroll !important;
     position: relative;
@@ -686,6 +697,7 @@ footer {
     padding-top: 20px !important;
     font-size: 1.7em !important; }
   section.aha p {
+    margin-top: 20px !important;
     font-size: 1.7em !important; }
   section.nice .bg .content h3 {
     float: none !important;
@@ -768,7 +780,32 @@ footer {
         max-width: 400px;
         margin-left: 0px !important; } }
 
+@-webkit-keyframes slidein {
+  0% {
+    right: -100%; }
+  100 {
+    right: 100%; } }
+
+@keyframes slidein {
+  0% {
+    right: -100%; }
+  100 {
+    right: 100%; } }
+
+@-webkit-keyframes opac {
+  0% {
+    opacity: 0; }
+  100 {
+    opacity: 1; } }
+
+@keyframes opac {
+  0% {
+    opacity: 0; }
+  100 {
+    opacity: 1; } }
+
 .menu-desk {
+  z-index: 1;
   width: 230px;
   position: fixed;
   top: 20px;
@@ -821,6 +858,10 @@ footer {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    .cel .iconos .left .c {
+      display: block; }
+    .cel .iconos .left .xx {
+      display: none; }
     .cel .iconos img {
       cursor: pointer;
       width: 35px; }
@@ -833,19 +874,21 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-animation: op 1s ease forwards;
+  animation: op 1s ease forwards; }
   .overlay .menubox {
-    z-index: 1000;
     display: none;
     position: absolute;
-    bottom: 0;
+    bottom: 100%;
     left: 0;
     background: url(../img/bg-menu.svg);
     background-position: left;
     background-size: cover;
     width: 30%;
     height: 100vh;
-    transition: all 1s ease !important; }
+    -webkit-animation: menu 1s ease forwards;
+    animation: menu 1s ease forwards; }
     .overlay .menubox .container {
       position: relative;
       top: 50%;
@@ -877,13 +920,15 @@ footer {
     z-index: 100;
     display: none;
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: 100%;
     background: url(../img/say.svg);
     background-position: left;
     background-size: cover;
     width: 30%;
-    height: 100vh; }
+    height: 100vh;
+    -webkit-animation: menu 1s ease forwards;
+    animation: menu 1s ease forwards; }
     .overlay .say .container {
       position: relative;
       top: 50%;
@@ -944,6 +989,8 @@ footer {
     display: none; }
   .cel {
     display: block; }
+  .overlay .x {
+    opacity: 0; }
   .overlay .menubox {
     height: calc(100vh - 75px);
     transition: all 1s ease !important;
@@ -952,6 +999,30 @@ footer {
 @media (max-width: 640px) {
   .overlay .menubox {
     width: 100% !important; } }
+
+@-webkit-keyframes menu {
+  0% {
+    bottom: 100%; }
+  100% {
+    bottom: 0%; } }
+
+@keyframes menu {
+  0% {
+    bottom: 100%; }
+  100% {
+    bottom: 0%; } }
+
+@-webkit-keyframes op {
+  0% {
+    background: transparent; }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
+
+@keyframes op {
+  0% {
+    background: transparent; }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
 
 section.page-aha {
   width: 100%;
@@ -968,6 +1039,7 @@ section.page-aha {
     background-repeat: no-repeat;
     background-position: right; }
     section.page-aha .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto; }
@@ -1003,6 +1075,7 @@ section.we {
     background-repeat: no-repeat;
     background-position: left; }
     section.we .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1031,6 +1104,7 @@ section.however {
     width: 100%;
     height: 100vh; }
     section.however .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1065,6 +1139,7 @@ section.one {
     width: 100%;
     height: 100vh; }
     section.one .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1095,7 +1170,7 @@ section.one {
 section.that {
   width: 100%;
   height: 100vh;
-  background: url(../img/aha/bg-that.svg);
+  background: url(../img/bg-bel1.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -1103,6 +1178,7 @@ section.that {
     width: 100%;
     height: 100vh; }
     section.that .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1150,6 +1226,7 @@ section.and {
     width: 100%;
     height: 50vh; }
     section.and .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1199,6 +1276,10 @@ footer {
         footer .content .right p:last-child {
           padding-bottom: 15px; }
 
+@media (max-width: 640px) {
+  section.one .bg .content .text p.top {
+    max-width: 100% !important; } }
+
 .container-nice section.page-nice {
   width: 100%;
   height: 100vh;
@@ -1214,6 +1295,7 @@ footer {
     background-repeat: no-repeat;
     background-position: right; }
     .container-nice section.page-nice .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto; }
@@ -1249,6 +1331,7 @@ footer {
     background-repeat: no-repeat;
     background-position: center; }
     .container-nice section.nice .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1282,6 +1365,7 @@ footer {
     background-repeat: no-repeat;
     background-position: center; }
     .container-nice section.and .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1315,6 +1399,7 @@ footer {
     background-repeat: no-repeat;
     background-position: center; }
     .container-nice section.what .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1347,6 +1432,7 @@ footer {
     width: 100%;
     height: 50vh; }
     .container-nice section.hello .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1372,6 +1458,7 @@ footer {
   color: #00556F;
   overflow: hidden; }
   .container-nice section.stand .bg .content {
+    padding: 15px;
     margin: 0 auto;
     max-width: 800px;
     position: relative; }
@@ -1513,6 +1600,132 @@ footer {
         .container-nice footer .content .right p:last-child {
           padding-bottom: 15px; }
 
+@media (max-width: 640px) {
+  section.stand .bg .content .top .left {
+    float: none !important; }
+    section.stand .bg .content .top .left h2 {
+      max-width: 440px;
+      letter-spacing: 2px;
+      font-weight: lighter;
+      font-size: 3.5em;
+      float: none !important;
+      margin-bottom: 50px; }
+  section.stand .bg .content .top .right {
+    margin-left: 0px !important;
+    max-width: 300px;
+    position: static !important; }
+    section.stand .bg .content .top .right a {
+      letter-spacing: 2px;
+      font-weight: lighter;
+      max-width: 300px;
+      font-size: 1.2em;
+      color: #00556f; }
+  section.stand .bg .content .bottom {
+    position: relative;
+    top: 50px !important;
+    height: 50vh;
+    overflow: auto; }
+    section.stand .bg .content .bottom .happiness {
+      display: block; }
+      section.stand .bg .content .bottom .happiness .left {
+        position: relative;
+        top: 75px;
+        float: none !important; }
+        section.stand .bg .content .bottom .happiness .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 1.5em; }
+      section.stand .bg .content .bottom .happiness .right {
+        position: absolute;
+        top: 0; }
+        section.stand .bg .content .bottom .happiness .right h2 {
+          font-size: 3.5em;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          max-width: 400px;
+          float: left !important; }
+    section.stand .bg .content .bottom .innovation {
+      display: none; }
+      section.stand .bg .content .bottom .innovation .left {
+        position: relative;
+        top: 75px;
+        float: none !important; }
+        section.stand .bg .content .bottom .innovation .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 1.5em; }
+      section.stand .bg .content .bottom .innovation .right {
+        position: absolute;
+        top: 0; }
+        section.stand .bg .content .bottom .innovation .right h2 {
+          font-size: 3.5em;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          max-width: 400px;
+          float: left !important; }
+    section.stand .bg .content .bottom .caring {
+      display: none; }
+      section.stand .bg .content .bottom .caring .left {
+        position: relative;
+        top: 75px;
+        float: none !important; }
+        section.stand .bg .content .bottom .caring .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 1.5em; }
+      section.stand .bg .content .bottom .caring .right {
+        position: absolute;
+        top: 0; }
+        section.stand .bg .content .bottom .caring .right h2 {
+          font-size: 3.5em;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          max-width: 400px;
+          float: left !important; }
+    section.stand .bg .content .bottom .over {
+      display: none; }
+      section.stand .bg .content .bottom .over .left {
+        position: relative;
+        top: 75px;
+        float: none !important; }
+        section.stand .bg .content .bottom .over .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 1.5em; }
+      section.stand .bg .content .bottom .over .right {
+        position: absolute;
+        top: 0; }
+        section.stand .bg .content .bottom .over .right h2 {
+          font-size: 3.5em;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          max-width: 400px;
+          float: left !important; }
+    section.stand .bg .content .bottom .tracendence {
+      display: none; }
+      section.stand .bg .content .bottom .tracendence .left {
+        position: relative;
+        top: 75px;
+        float: none !important; }
+        section.stand .bg .content .bottom .tracendence .left h3 {
+          letter-spacing: 2px;
+          font-weight: lighter;
+          max-width: 300px;
+          font-size: 1.5em; }
+      section.stand .bg .content .bottom .tracendence .right {
+        position: absolute;
+        top: 0; }
+        section.stand .bg .content .bottom .tracendence .right h2 {
+          font-size: 3.5em;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          max-width: 400px;
+          float: left !important; } }
+
 .container-process section.page-nice {
   width: 100%;
   height: 100vh;
@@ -1530,7 +1743,8 @@ footer {
     .container-process section.page-nice .bg .content {
       margin: 0 auto;
       max-width: 800px;
-      overflow: auto; }
+      overflow: auto;
+      padding: 15px; }
       .container-process section.page-nice .bg .content img {
         margin-top: 30px;
         max-width: 250px; }
@@ -1547,7 +1761,8 @@ footer {
         font-weight: lighter;
         font-size: 5em;
         line-height: 1.3em;
-        float: right; }
+        float: right;
+        margin-top: 100px; }
 
 .container-process section.properties {
   width: 100%;
@@ -1562,6 +1777,7 @@ footer {
     background-repeat: no-repeat;
     background-position: left; }
     .container-process section.properties .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 700px;
       overflow: auto;
@@ -1589,6 +1805,7 @@ footer {
   color: #00556F;
   overflow: hidden; }
   .container-process section.this .bg .content {
+    padding: 15px;
     margin: 0 auto;
     max-width: 800px;
     position: relative; }
@@ -1638,6 +1855,7 @@ footer {
     width: 100%;
     height: 100vh; }
     .container-process section.planning .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 750px;
       position: relative;
@@ -1669,7 +1887,7 @@ footer {
 .container-process section.pre {
   width: 100%;
   height: 100vh;
-  background: url(../img/process/bg-pre.svg);
+  background: url(../img/nice/bg-stand.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1679,6 +1897,7 @@ footer {
     width: 100%;
     height: 100vh; }
     .container-process section.pre .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 750px;
       position: relative;
@@ -1721,6 +1940,7 @@ footer {
     width: 100%;
     height: 100vh; }
     .container-process section.operative .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 750px;
       position: relative;
@@ -1761,6 +1981,7 @@ footer {
     width: 100%;
     height: 50vh; }
     .container-process section.much .bg .content {
+      padding: 15px;
       margin: 0 auto;
       max-width: 800px;
       overflow: auto;
@@ -1776,6 +1997,28 @@ footer {
         font-weight: lighter;
         letter-spacing: 2px;
         max-width: 700px; }
+
+@media (max-width: 1000px) {
+  section.page-nice .bg {
+    background: none !important; } }
+
+@media (max-width: 640px) {
+  section.planning .bg .content .top .left h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px; }
+  section.pre {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/nice/bg-stand.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #00556F;
+    overflow: hidden; }
+    section.pre .bg .content .top .left h2 {
+      margin-bottom: 40px; }
+  section.operative .bg .content .top .left h2 {
+    margin-bottom: 40px; } }
 
 .container-us section.started {
   width: 100%;
@@ -1879,7 +2122,8 @@ footer {
     .container-care section.page-nice .bg .content {
       margin: 0 auto;
       max-width: 800px;
-      overflow: auto; }
+      overflow: auto;
+      padding: 15px; }
       .container-care section.page-nice .bg .content img {
         margin-top: 30px;
         max-width: 250px; }
@@ -1920,7 +2164,8 @@ footer {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      color: #00556f; }
+      color: #00556f;
+      padding: 15px; }
       .container-care section.properties .bg .content .left {
         max-width: 420px;
         float: left; }
