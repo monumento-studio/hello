@@ -12,13 +12,21 @@ $( document ).ready(function() {
   $('.menuclick').click(function(){
     $('.overlay').css( "display", "block" );
     $('.menubox').css( "display", "block" );
+    $('.login').css( "display", "none" );
   });
 
 
   $('#say').click(function(){
     $('.overlay').css( "display", "block" );
     $('.say').css( "display", "block" );
+    $('.login').css( "display", "none" );
   });
+
+  $('#login').click(function(){
+    $('.overlay').css( "display", "block" );
+    $('.login').css( "display", "block" );
+  });
+
 
 
 

@@ -829,16 +829,14 @@ footer {
   .menu-desk .text {
     display: block;
     margin: 90px 60px;
-    overflow: auto; }
+    overflow: auto;
+    font-size: .8em !important; }
     .menu-desk .text a {
       color: white;
       box-sizing: border-box;
       line-height: 1px !important;
       letter-spacing: 3px;
-      font-weight: lighter;
-      font-size: .7em; }
-      .menu-desk .text a::after {
-        mix-blend-mode: difference !important; }
+      font-weight: lighter; }
 
 .cel {
   position: fixed;
@@ -974,6 +972,48 @@ footer {
         height: 20px; }
   .overlay .how {
     display: none; }
+  .overlay .login {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #00556f;
+    width: 500px;
+    -webkit-animation: opa 1s ease forwards;
+    animation: opa 1s ease forwards; }
+    .overlay .login .container {
+      padding: 50px;
+      text-align: center;
+      position: relative; }
+      .overlay .login .container .text {
+        font-weight: bolder;
+        font-size: .8em;
+        letter-spacing: 2px;
+        color: #00556f !important; }
+        .overlay .login .container .text form {
+          display: block;
+          background: red; }
+        .overlay .login .container .text a {
+          padding: 0;
+          margin: 0;
+          color: #00556f !important; }
+        .overlay .login .container .text p {
+          padding: 0;
+          margin: 0;
+          color: #00556f; }
+    .overlay .login img {
+      cursor: pointer;
+      margin-bottom: 50px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 10px;
+      box-sizing: border-box;
+      top: 10px; }
 
 @media (max-width: 1000px) {
   .menu-desk .menu {
@@ -1026,6 +1066,18 @@ footer {
     background: transparent; }
   100% {
     background: rgba(0, 0, 0, 0.5); } }
+
+@-webkit-keyframes opa {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opa {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 section.page-aha {
   width: 100%;

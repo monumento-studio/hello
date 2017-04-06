@@ -25,6 +25,7 @@
 		display: block
 		margin: 90px 60px
 		overflow: auto
+		font-size: .8em !important
 
 		a
 			color: white
@@ -32,9 +33,6 @@
 			line-height: 1px !important
 			letter-spacing: 3px
 			font-weight: lighter
-			font-size: .7em
-			&::after
-				mix-blend-mode: difference !important
 .cel
 	position: fixed
 	top: 0
@@ -165,6 +163,48 @@
 
 	.how
 		display: none
+
+	.login
+		display: none
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		background: #00556f
+		width: 500px
+		animation: opa 1s ease forwards
+
+		.container
+			padding: 50px
+			text-align: center
+			position: relative
+			.text
+				font-weight: bolder
+				font-size: .8em
+				letter-spacing: 2px
+				color: #00556f !important
+				form
+					display: block
+					background: red
+				a
+					padding: 0
+					margin: 0
+					color: #00556f !important
+				p
+					padding: 0
+					margin: 0
+					color: #00556f
+		img
+			cursor: pointer
+			margin-bottom: 50px
+			display: inline-block
+			width: 20px
+			height: 20px
+			position: absolute
+			right: 10px
+			box-sizing: border-box
+			top: 10px
+
 @media(max-width: 1000px)
 	.menu-desk
 		.menu
@@ -209,3 +249,8 @@
 		background: rgba(0,0,0, 0)
 	100%
 		background: rgba(0,0,0, 0.5)
+@keyframes opa
+	0%
+		opacity: 0
+	100%
+		opacity: 1
