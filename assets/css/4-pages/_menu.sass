@@ -25,7 +25,7 @@
 		display: block
 		margin: 90px 60px
 		overflow: auto
-		font-size: .8em !important
+		font-size: .9em !important
 
 		a
 			color: white
@@ -171,29 +171,35 @@
 		top: 50%
 		transform: translate(-50%, -50%)
 		background: #00556f
-		width: 500px
+		max-width: 500px
 		animation: opa 1s ease forwards
 
 		.container
 			padding: 50px
-			text-align: center
+			text-align: left
 			position: relative
 			.text
-				font-weight: bolder
-				font-size: .8em
+				font-weight: lighter
+				text-align: center
 				letter-spacing: 2px
-				color: #00556f !important
+				color: white !important
+				h2
+					border-bottom: solid 1px white
+					margin-bottom: 20px
+					font-size: 3.5em
+				p
+					text-align: 1em !important
+					color: white !important
+					padding-bottom: 20px
+
+				hr
+					border: solid .5px white
+
 				form
-					display: block
-					background: red
+					float: left
 				a
 					padding: 0
 					margin: 0
-					color: #00556f !important
-				p
-					padding: 0
-					margin: 0
-					color: #00556f
 		img
 			cursor: pointer
 			margin-bottom: 50px
@@ -227,16 +233,56 @@
 	.overlay
 		.x
 			opacity: 0
-		.menubox
+		.menubox, .say
 			height: calc(100vh - 75px)
 			transition: all 1s ease !important
 			width: 50% !important
+	.text
+		font-size: 1.8em
+		margin-bottom: 20px
 @media(max-width: 640px)
 	.menu-desk
 	.cel
 	.overlay
-		.menubox
+		.menubox, .say
 			width: 100% !important
+		.say
+			.container
+				.text
+					color: #00556f
+					.info
+						font-weight: bolder
+						margin-top: 30px
+						font-size: .8em
+						letter-spacing: 2px
+						color: #00556f !important
+						a
+							padding: 0
+							margin: 0
+							color: #00556f !important
+						p
+							padding: 0
+							margin: 0
+							color: #00556f
+
+					h3
+						margin-top: 30px
+						letter-spacing: 2px
+						color: #00556f
+						font-size: 2em
+					h2
+						letter-spacing: 2px
+						font-size: 2.5em
+						margin-top: 20px
+						margin-left: 120px
+
+				img
+					cursor: pointer
+					margin-bottom: 50px
+					margin-top: -40px
+					display: block
+					width: 20px
+					height: 20px
 
 @keyframes menu
 	0%

@@ -8,28 +8,36 @@ $( document ).ready(function() {
     $('.c').css( "display", "none" );
     $('.xx').css( "display", "block" );
   });
+  $('.sayy').click(function(){
+    $('.c').css( "display", "none" );
+    $('.xx').css( "display", "block" );
+  });
 
   $('.menuclick').click(function(){
     $('.overlay').css( "display", "block" );
     $('.menubox').css( "display", "block" );
+    $('.say').css( "display", "none" );
     $('.login').css( "display", "none" );
   });
 
 
-  $('#say').click(function(){
+  $('.sayy').click(function(){
     $('.overlay').css( "display", "block" );
     $('.say').css( "display", "block" );
     $('.login').css( "display", "none" );
   });
 
-  $('#login').click(function(){
+  $('.loginn').click(function(){
     $('.overlay').css( "display", "block" );
     $('.login').css( "display", "block" );
+    $('.say').css( "display", "none" );
+    $('.menubox').css( "display", "none" );
   });
 
-
-
-
+$('.loginn').click(function(){
+  $('.c').css( "display", "none" );
+  $('.xx').css( "display", "block" );
+});
 
   $('.x').click(function(){
     $('.overlay').css( "display", "none" );
