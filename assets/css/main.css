@@ -1079,7 +1079,7 @@ footer {
       letter-spacing: 2px;
       font-size: 2.5em;
       margin-top: 20px;
-      margin-left: 120px; }
+      margin-left: 20px !important; }
   .overlay .say .container img {
     cursor: pointer;
     margin-bottom: 50px;
